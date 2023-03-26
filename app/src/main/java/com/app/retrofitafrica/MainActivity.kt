@@ -23,12 +23,15 @@ class MainActivity : AppCompatActivity() {
                     val countries = response.body()
 
                     // Agrega cada objeto Country a la lista
-                    countries?.forEach { (key, value) ->
+
+                    countries?.forEach { (_, value) ->
+
                         listaPaises.add(value)
                     }
 
                     initRecyclerView(listaPaises)
                 } else {
+                    // Aqui va el login
 
                 }
             }
