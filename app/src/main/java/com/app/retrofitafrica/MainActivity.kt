@@ -23,13 +23,16 @@ class MainActivity : AppCompatActivity() {
                     val countries = response.body()
 
                     // Agrega cada objeto Country a la lista
+
                     countries?.forEach { (_, value) ->
+
                         listaPaises.add(value)
                     }
 
                     initRecyclerView(listaPaises)
                 } else {
                     // Aqui va el login
+
                 }
             }
             override fun onFailure(call: Call<Map<String, PaisResponse>>, t: Throwable) {
