@@ -20,19 +20,13 @@ class MainActivity : AppCompatActivity() {
         call.getPaises().enqueue(object : Callback<Map<String, PaisResponse>> {
             override fun onResponse(call: Call<Map<String, PaisResponse>>, response: Response<Map<String, PaisResponse>>) {
                 if (response.isSuccessful) {
-                    val countries = response.body()
-
-                    // Agrega cada objeto Country a la lista
-
-                    countries?.forEach { (_, value) ->
+                    val paises = response.body()
+                    paises?.forEach { (_, value) ->
 
                         listaPaises.add(value)
                     }
 
                     initRecyclerView(listaPaises)
-                } else {
-                    // Aqui va el login
-
                 }
             }
             override fun onFailure(call: Call<Map<String, PaisResponse>>, t: Throwable) {
