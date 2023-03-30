@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">RetrofitAfrica</string>
+    <string name="iconContent">Icono de aplicación</string>
+
+    <string name="buttonTextInitScreen">Comenzar</string>
 </resources>
