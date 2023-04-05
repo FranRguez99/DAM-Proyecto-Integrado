@@ -1,36 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/clInitScreen"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_initscreen"
-    tools:context=".MainActivity">
+    tools:ignore="SpeakableTextPresentCheck">
 
-    <ImageView
-        android:id="@+id/ivIconInitScreen"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="@string/iconContent"
-        app:layout_constraintBottom_toTopOf="@+id/buttonInitScreen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/africa" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonInitScreen"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/button_initscreen"
-        android:text="@string/buttonTextInitScreen"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/ivIconInitScreen"
-        app:layout_constraintStart_toStartOf="@+id/ivIconInitScreen"
-        tools:ignore="VisualLintButtonSize" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="635dp"
+            android:contentDescription="@string/iconContent"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/mockup_pantalla_inicio_removebg_preview" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loginscreen"
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:background="@drawable/login_screen">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

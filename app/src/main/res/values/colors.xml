@@ -16,5 +16,9 @@
     <color name="Tekhelet">#5A189A</color>
     <color name="FrenchViolet">#7B2CBF</color>
     <color name="Amethyst">#9D4EDD</color>
+    
+    <!-- Paleta de gradiente de fondo  -->
+    <color name="lightYellow">#ffde59</color>
+    <color name="orange">#ff914d</color>
 
 </resources>
