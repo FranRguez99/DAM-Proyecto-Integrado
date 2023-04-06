@@ -16,11 +16,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         val displayMetrics = resources.displayMetrics
-        val dpHeight = displayMetrics.heightPixels - 200
-        val layoutParams = binding.loginscreen.layoutParams
-        layoutParams.height = dpHeight
+        val dpHeight = displayMetrics.heightPixels
+
+
+        var layoutParams = binding.loginscreen.layoutParams
+        layoutParams.height = dpHeight - 200
         binding.loginscreen.layoutParams = layoutParams
+
+        layoutParams = binding.imageView.layoutParams
+        layoutParams.height = dpHeight - 350
+        binding.imageView.layoutParams = layoutParams
+
 
 
     }

@@ -2,5 +2,13 @@
     <string name="app_name">RetrofitAfrica</string>
     <string name="iconContent">Icono de aplicación</string>
 
-    <string name="buttonTextInitScreen">Comenzar</string>
+    <!--Strings pantalla de inicio -->
+    <string name="textInitScreen">Inicio de sesión</string>
+    <string name="emailHint">Email:</string>
+    <string name="passHint">Contraseña:</string>
+    <string name="rememberHint">Recuerdame:</string>
+    <string name="textButtonLogIn">Iniciar Sesión</string>
+    <string name="textButtonSignIn1">¿No estás registrado?</string>
+    <string name="textButtonSignIn2">Registrate aquí</string>
+
 </resources>
