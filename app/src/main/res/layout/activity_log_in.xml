@@ -152,9 +152,13 @@
             android:id="@+id/switch1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="false"
+            android:textColorHighlight="@color/SelectiveYellow"
+            android:textColorLink="@color/SelectiveYellow"
             app:layout_constraintBottom_toBottomOf="@+id/textView4"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
-            app:layout_constraintTop_toTopOf="@+id/textView4" />
+            app:layout_constraintTop_toTopOf="@+id/textView4"
+            app:trackTint="@color/SelectiveYellow" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
