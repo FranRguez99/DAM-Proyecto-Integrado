@@ -63,6 +63,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -77,6 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito_bold"
+                android:inputType="textEmailAddress"
                 tools:ignore="SpeakableTextPresentCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -95,6 +97,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -105,9 +108,12 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tietPass"
+                style="textinput"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:fontFamily="@font/nunito_bold"
+                android:inputType="textPassword"
+                android:singleLine="true"
                 tools:ignore="SpeakableTextPresentCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,13 +135,15 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btSignIn"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
+            android:background="@color/white"
             android:fontFamily="@font/nunito_black"
             android:text="@string/textButtonSignIn1"
             android:textSize="16sp"
-            app:backgroundTint="@color/white"
+            app:backgroundTint="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
