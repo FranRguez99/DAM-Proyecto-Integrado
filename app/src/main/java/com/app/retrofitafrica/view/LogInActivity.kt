@@ -1,5 +1,6 @@
 package com.app.retrofitafrica.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +17,6 @@ class LogInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLogInBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         authController = AuthController(this)
         getSharedRemember()
         binding.btLogIn.setOnClickListener {
@@ -30,7 +30,9 @@ class LogInActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Debe rellenar todos los campos", Toast.LENGTH_SHORT).show()
             }
-
+        }
+        binding.btSignIn.setOnClickListener {
+            startActivity(Intent(this , SignInActivity::class.java))
         }
     }
 
