@@ -1,14 +1,21 @@
 <resources>
     <string name="app_name">RetrofitAfrica</string>
+
+    <!-- Content Description de los Image View -->
     <string name="iconContent">Icono de aplicación</string>
+    <string name="backContent">Imagen de botón retroceso</string>
 
     <!--Strings pantalla de inicio -->
-    <string name="textInitScreen">Inicio de sesión</string>
+    <string name="textInitScreen">Inicio de Sesión</string>
     <string name="emailHint">Email:</string>
     <string name="passHint">Contraseña:</string>
     <string name="rememberHint">Recuerdame:</string>
     <string name="textButtonLogIn">Iniciar Sesión</string>
     <string name="textButtonSignIn1">¿No estás registrado?</string>
-    <string name="textButtonSignIn2">Registrate aquí</string>
+
+    <!-- Strings pantalla de registro -->
+    <string name="textConfPassword">Confirmar Contraseña:</string>
+    <string name="textSignInScreen">Registro de Usuario</string>
+    <string name="textButtonConfirm">Confirmar</string>
 
 </resources>
