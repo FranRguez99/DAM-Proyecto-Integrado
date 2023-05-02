@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RetrofitAfrica</string>
+    <string name="app_name">AfriQuiz</string>
 
     <!-- Content Description de los Image View -->
     <string name="iconContent">Icono de aplicación</string>
@@ -17,5 +17,13 @@
     <string name="textConfPassword">Confirmar Contraseña:</string>
     <string name="textSignInScreen">Registro de Usuario</string>
     <string name="textButtonConfirm">Confirmar</string>
+
+    <!-- Strings pantalla de menú -->
+    <string name="logOut">Cerrar Sesión</string>
+    <string name="textWelcome">¡Bienvenido!</string>
+    <string name="selectOption">Seleccione una opción:</string>
+    <string name="opt1">Tests</string>
+    <string name="opt2">Puntuaciones</string>
+    <string name="opt3">Glosario</string>
 
 </resources>

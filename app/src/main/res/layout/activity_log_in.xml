@@ -81,6 +81,7 @@
                 android:background="@drawable/textinput_stroke"
                 android:fontFamily="@font/nunito_bold"
                 android:inputType="textEmailAddress"
+                android:singleLine="true"
                 tools:ignore="SpeakableTextPresentCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
