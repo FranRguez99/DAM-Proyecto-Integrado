@@ -1,5 +1,6 @@
 package com.app.retrofitafrica.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.app.retrofitafrica.databinding.ActivityMenuBinding
@@ -10,5 +11,9 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.ivBackButtonMenu.setOnClickListener {
+            startActivity(Intent(this, LogInActivity::class.java))
+        }
     }
 }

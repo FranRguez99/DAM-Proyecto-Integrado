@@ -8,6 +8,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.widget.Toast
 import com.app.retrofitafrica.view.LogInActivity
+import com.app.retrofitafrica.view.MenuActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -20,14 +21,8 @@ class AuthController(private var context: Context) {
             firebaseAuth = Firebase.auth
             firebaseAuth.signInWithEmailAndPassword(email , password).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    mostrarToast("Usuario Logeado")
-                    mostrarToast("Mostrar menú")
-                    //Aqui se debe modificar
-                    //val intent = Intent(context, ::class.java )
-                    //context.startActivity(intent)
                     val preferences = context.getSharedPreferences("remember", MODE_PRIVATE)
                     val editor : SharedPreferences.Editor = preferences.edit()
-
                     if (remember) {
                         editor.putString("email", email)
                         editor.putString("pass", password)
@@ -37,6 +32,8 @@ class AuthController(private var context: Context) {
                         editor.putString("pass", "")
                         editor.apply()
                     }
+                    mostrarToast("Sesión iniciada exitosamente")
+                    context.startActivity(Intent(context, MenuActivity::class.java ))
 
                 } else {
                     mostrarToast("Usuario o contraseña incorrectos")
