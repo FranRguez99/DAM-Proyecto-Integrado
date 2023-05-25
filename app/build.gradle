@@ -35,20 +35,34 @@ android {
         jvmTarget = '1.8'
     }
 }
-
+apply plugin: 'kotlin-kapt'
 dependencies {
 
     //noinspection GradleDependency
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Imagenes en red
     implementation 'com.squareup.picasso:picasso:2.71828'
+    // Para la API de las capitales
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // Room
+    implementation 'androidx.room:room-runtime:2.5.1'
+    annotationProcessor 'androidx.room:room-compiler:2.5.1'
+    kapt 'androidx.room:room-compiler:2.5.1'
+
+    // Corrutinas
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    // Para el Log In y Sign In
     implementation platform('com.google.firebase:firebase-bom:31.5.0')
-    implementation 'com.google.firebase:firebase-auth-ktx:21.3.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:22.0.0'
+
+    // Tests
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'

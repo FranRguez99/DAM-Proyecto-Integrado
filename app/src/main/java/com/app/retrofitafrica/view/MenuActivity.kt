@@ -15,5 +15,9 @@ class MenuActivity : AppCompatActivity() {
         binding.ivBackButtonMenu.setOnClickListener {
             startActivity(Intent(this, LogInActivity::class.java))
         }
+
+        binding.btGlosary.setOnClickListener {
+            startActivity(Intent(this, GlossaryActivity::class.java))
+        }
     }
 }

@@ -26,4 +26,7 @@
     <string name="opt2">Puntuaciones</string>
     <string name="opt3">Glosario</string>
 
+    <!-- String pantalla glosario -->
+    <string name="textTitleGlossary">Glosario de Paises</string>
+
 </resources>

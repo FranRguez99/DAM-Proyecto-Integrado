@@ -1,4 +1,4 @@
-package com.app.retrofitafrica.model
+package com.app.retrofitafrica.model.modelAPI
 
 import com.google.gson.annotations.SerializedName
 

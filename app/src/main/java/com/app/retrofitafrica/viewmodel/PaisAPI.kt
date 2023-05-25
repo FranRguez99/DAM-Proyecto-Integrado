@@ -1,6 +1,6 @@
 package com.app.retrofitafrica.viewmodel
 
-import com.app.retrofitafrica.model.PaisResponse
+import com.app.retrofitafrica.model.modelAPI.PaisResponse
 import retrofit2.Call
 import retrofit2.http.GET
 
