@@ -9,9 +9,11 @@ import com.app.retrofitafrica.model.Pais
 @Dao
 interface PaisDao {
     @Query("Select * from paises")
-    fun getAll(): List<Pais>
+    fun getAllPaises(): List<Pais>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insertPais(pais : Pais)
 
+    @Query("Select count(*) from paises")
+    fun getCountPaises(): Int
 }

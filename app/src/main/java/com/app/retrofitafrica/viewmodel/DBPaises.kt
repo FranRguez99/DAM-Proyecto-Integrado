@@ -10,6 +10,6 @@ class DBPaises {
     fun getPaises(context: Context) : ArrayList<Pais> {
         val db = Room.databaseBuilder(context, AppDatabasePaises::class.java, "Paises").build()
         val paisDao = db.paisDao()
-        return paisDao.getAll() as ArrayList<Pais>
+        return paisDao.getAllPaises() as ArrayList<Pais>
     }
 }
