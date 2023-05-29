@@ -56,11 +56,17 @@ dependencies {
     kapt 'androidx.room:room-compiler:2.5.1'
 
     // Corrutinas
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation('org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4') {
+        exclude group: 'com.google.guava', module: 'listenablefuture'
+    }
 
     // Para el Log In y Sign In
     implementation platform('com.google.firebase:firebase-bom:31.5.0')
     implementation 'com.google.firebase:firebase-auth-ktx:22.0.0'
+
+    // MVVM y LiveData
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
 
     // Tests
     testImplementation 'junit:junit:4.13.2'
