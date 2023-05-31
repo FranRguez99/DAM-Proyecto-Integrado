@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MenuActivity">
+    tools:context=".view.TestActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -15,8 +15,10 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/mockup_pantalla_inicio_removebg_preview"
         tools:ignore="ImageContrastCheck" />
 
@@ -24,43 +26,16 @@
         android:id="@+id/btStart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="150dp"
         android:background="@drawable/button_initscreen"
         android:fontFamily="@font/nunito_black"
-        android:text="@string/opt1"
+        android:text="@string/start"
         android:textSize="19sp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="@+id/tvSubtitle"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tvSubtitle"
-        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btRanking"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/button_initscreen"
-        android:fontFamily="@font/nunito_black"
-        android:text="@string/opt2"
-        android:textSize="19sp"
-        app:backgroundTint="@null"
-        app:layout_constraintEnd_toEndOf="@+id/btStart"
-        app:layout_constraintStart_toStartOf="@+id/btStart"
-        app:layout_constraintTop_toBottomOf="@+id/btStart" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btGlosary"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/button_initscreen"
-        android:fontFamily="@font/nunito_black"
-        android:text="@string/opt3"
-        android:textSize="19sp"
-        app:backgroundTint="@null"
-        app:layout_constraintEnd_toEndOf="@+id/btRanking"
-        app:layout_constraintStart_toStartOf="@+id/btRanking"
-        app:layout_constraintTop_toBottomOf="@+id/btRanking" />
+        app:layout_constraintTop_toBottomOf="@+id/sbNumber" />
 
     <ImageView
         android:id="@+id/ivBackButtonMenu"
@@ -93,13 +68,14 @@
         android:id="@+id/tvHeader"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="92dp"
         android:fontFamily="@font/nunito_black"
-        android:text="@string/textWelcome"
+        android:text="@string/testHeader"
         android:textAlignment="center"
-        android:textColor="@color/RussianViolet"
+        android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLogout" />
 
@@ -108,12 +84,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_bold"
-        android:text="@string/selectOption"
+        android:text="@string/testSubtitle"
         android:textAlignment="center"
-        android:textColor="@color/Tekhelet"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/tvHeader"
         app:layout_constraintStart_toStartOf="@+id/tvHeader"
         app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
+
+    <SeekBar
+        android:id="@+id/sbNumber"
+        android:layout_width="306dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="150dp"
+        android:progressTint="@color/SelectiveYellow"
+        android:thumbTint="@color/SelectiveYellow"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

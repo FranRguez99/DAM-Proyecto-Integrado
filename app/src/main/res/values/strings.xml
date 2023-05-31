@@ -29,4 +29,9 @@
     <!-- String pantalla glosario -->
     <string name="textTitleGlossary">Glosario de Paises</string>
 
+    <!-- String pantalla de test -->
+    <string name="testHeader">Tests</string>
+    <string name="testSubtitle">Seleccione la cantidad de preguntas:</string>
+    <string name="start">Comenzar</string>
+
 </resources>
