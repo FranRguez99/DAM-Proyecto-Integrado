@@ -12,6 +12,10 @@ class MenuActivity : AppCompatActivity() {
         binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btStart.setOnClickListener {
+            startActivity(Intent(this, TestActivity::class.java))
+        }
+
         binding.ivBackButtonMenu.setOnClickListener {
             startActivity(Intent(this, LogInActivity::class.java))
         }
