@@ -46,6 +46,11 @@ class TestActivity : AppCompatActivity() {
             }
         })
 
+        binding.btStart.setOnClickListener {
+            val numPreguntas = binding.sbNumber.progress
+            startActivity(Intent(this, QuizActivity::class.java).putExtra("numPreguntas", numPreguntas))
+        }
+
         binding.ivBackButtonSelectTest.setOnClickListener {
             startActivity(Intent(this, MenuActivity::class.java))
         }

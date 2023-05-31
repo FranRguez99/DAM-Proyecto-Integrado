@@ -29,10 +29,14 @@
     <!-- String pantalla glosario -->
     <string name="textTitleGlossary">Glosario de Paises</string>
 
-    <!-- String pantalla de test -->
+    <!-- String pantalla de selección de test -->
     <string name="textTitleSelectTest">Tests</string>
     <string name="textSubtitleTest">Seleccione la cantidad de preguntas:</string>
     <string name="btStartTest">Comenzar</string>
     <string name="textNumPreguntas">Número de preguntas:</string>
+
+    <!-- String pantalla de test -->
+    <string name="textQuestionSubtitle">¿Cuál es la capital de…</string>
+    <string name="nextQuestion"> >>> </string>
 
 </resources>
