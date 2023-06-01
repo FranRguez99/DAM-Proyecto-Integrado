@@ -27,7 +27,7 @@
     <string name="opt3">Glosario</string>
 
     <!-- String pantalla glosario -->
-    <string name="textTitleGlossary">Glosario de Paises</string>
+    <string name="textTitleGlossary">Glosario de Países</string>
 
     <!-- String pantalla de selección de test -->
     <string name="textTitleSelectTest">Tests</string>

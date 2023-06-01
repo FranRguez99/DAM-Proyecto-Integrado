@@ -2,7 +2,6 @@ package com.app.retrofitafrica.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
 import com.app.retrofitafrica.databinding.ActivityTestBinding
@@ -23,7 +22,6 @@ class TestActivity : AppCompatActivity() {
             numPaises?.let { number ->
                 if (number >= 1 ) {
                     binding.sbNumber.max = number
-                    Log.d("::Pruebas", binding.sbNumber.max.toString())
                 }
             }
         }
