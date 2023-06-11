@@ -7,6 +7,19 @@
     tools:context=".view.TestActivity">
 
     <ImageView
+        android:id="@+id/ivBackButtonSelectTest"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/backContent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        app:tint="@color/SelectiveYellow"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
         android:id="@+id/imageView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -22,54 +35,26 @@
         app:srcCompat="@drawable/mockup_pantalla_inicio_removebg_preview"
         tools:ignore="ImageContrastCheck" />
 
-    <ImageView
-        android:id="@+id/ivBackButtonMenu"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/backContent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_lock_power_off"
-        app:tint="@color/SelectiveYellow"
-        tools:ignore="ImageContrastCheck" />
-
-    <TextView
-        android:id="@+id/tvLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/nunito_black"
-        android:gravity="center_vertical"
-        android:text="@string/logOut"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/ivBackButtonMenu"
-        app:layout_constraintStart_toEndOf="@+id/ivBackButtonMenu"
-        app:layout_constraintTop_toTopOf="@+id/ivBackButtonMenu" />
-
     <TextView
         android:id="@+id/tvHeader"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
         android:fontFamily="@font/nunito_black"
-        android:text="@string/testHeader"
+        android:text="@string/textTitleSelectTest"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogout" />
+        app:layout_constraintTop_toBottomOf="@+id/ivBackButtonSelectTest" />
 
     <TextView
         android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_bold"
-        android:text="@string/testSubtitle"
+        android:text="@string/textSubtitleTest"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -77,16 +62,15 @@
         app:layout_constraintStart_toStartOf="@+id/tvHeader"
         app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
 
-    <SeekBar
+    <androidx.appcompat.widget.AppCompatSeekBar
         android:id="@+id/sbNumber"
-        android:layout_width="306dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="150dp"
-        android:max="51"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:progressTint="@color/SelectiveYellow"
         android:thumbTint="@color/SelectiveYellow"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="@+id/tvSubtitle"
         app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
 
 
@@ -94,10 +78,10 @@
         android:id="@+id/btStart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/button_initscreen"
         android:fontFamily="@font/nunito_black"
-        android:text="@string/start"
+        android:text="@string/btStartTest"
         android:textSize="19sp"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
@@ -107,11 +91,31 @@
 
     <TextView
         android:id="@+id/tvQuestions"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/nunito_bold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="@+id/sbNumber"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        tools:text="51" />
+
+    <TextView
+        android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/btStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/nunito_black"
+        android:text="@string/textNumPreguntas"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/sbNumber"
         app:layout_constraintTop_toBottomOf="@+id/sbNumber" />
 
 

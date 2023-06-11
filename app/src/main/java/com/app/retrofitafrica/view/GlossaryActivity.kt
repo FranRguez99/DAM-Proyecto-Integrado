@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.retrofitafrica.databinding.ActivityGlossaryBinding
 import com.app.retrofitafrica.viewmodel.DBPaises
@@ -24,7 +23,7 @@ class GlossaryActivity : AppCompatActivity() {
         binding.rcPaises.adapter = glossaryAdapter
         binding.rcPaises.layoutManager = LinearLayoutManager(this)
 
-        dbPaises = ViewModelProvider(this)[DBPaises::class.java]
+        dbPaises = DBPaises(this)
 
         dbPaises.getPaisesLiveData().observe(this) { listaPaises ->
             listaPaises?.let {
@@ -32,7 +31,7 @@ class GlossaryActivity : AppCompatActivity() {
                 glossaryAdapter.notifyDataSetChanged()
             }
         }
-        dbPaises.cargarPaises(this)
+        dbPaises.cargarListaPaises()
 
         binding.ivBackButtonGlossary.setOnClickListener{
             startActivity(Intent(this, MenuActivity::class.java))

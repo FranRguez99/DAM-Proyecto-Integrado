@@ -23,5 +23,8 @@ class MenuActivity : AppCompatActivity() {
         binding.btGlosary.setOnClickListener {
             startActivity(Intent(this, GlossaryActivity::class.java))
         }
+        binding.btTests.setOnClickListener {
+            startActivity(Intent(this, TestActivity::class.java))
+        }
     }
 }
