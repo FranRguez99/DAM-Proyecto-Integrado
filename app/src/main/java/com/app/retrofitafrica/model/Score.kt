@@ -1,19 +1,23 @@
 package com.app.retrofitafrica.model
 
-import android.os.Build
-import androidx.annotation.RequiresApi
-import java.time.LocalDate
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-@RequiresApi(Build.VERSION_CODES.O)
-class Score(numPreguntas : Int, rightAnswers : Int, wrongAnswers : Int) {
-    private val fechaRealizacion : LocalDate = LocalDate.now()
-    private var numPreguntas : Int
-    private var rightAnswers : Int
-    private var wrongAnswers : Int
-    init {
-        this.numPreguntas = numPreguntas
-        this.rightAnswers = rightAnswers
-        this.wrongAnswers = wrongAnswers
-    }
+@Entity(tableName = "scoreboard")
+data class Score(
+    @PrimaryKey(autoGenerate = true)
+    val id : Int = 0,
 
-}
+    @ColumnInfo(name = "numPreguntas")
+    val numPreguntas : Int,
+
+    @ColumnInfo(name = "rightAnswers")
+    val rightAnswers : Int,
+
+    @ColumnInfo(name = "wrongAnswers")
+    val wrongAnswers : Int ,
+
+    @ColumnInfo(name = "fechaRealizacion")
+    val fechaRealizacion : String
+)
