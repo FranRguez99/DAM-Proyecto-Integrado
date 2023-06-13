@@ -1,7 +1,9 @@
 package com.app.retrofitafrica.view
 
+import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.app.retrofitafrica.databinding.ActivityQuizBinding
@@ -21,6 +23,7 @@ class QuizActivity : AppCompatActivity() {
 
     private lateinit var rightAnswer : Pais
     private lateinit var selectedAnswer : Pais
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQuizBinding.inflate(layoutInflater)
@@ -43,7 +46,7 @@ class QuizActivity : AppCompatActivity() {
                 if (quizController.hasMoreQuestions()) {
                     loadQuestion()
                 } else {
-                    mostrarToast("TEST COMPLETADO")
+                    quizController.submitScore()
                 }
             } else {
                 mostrarToast("Debe seleccionar una opción.")
@@ -58,7 +61,7 @@ class QuizActivity : AppCompatActivity() {
         currentQuestionOptions = quizController.getNewQuestion()
         rightAnswer = currentQuestionOptions[0]
 
-        currentQuestionOptions.shuffled()
+        currentQuestionOptions.shuffle()
 
         Picasso.get().load(rightAnswer.bandera).fit().centerCrop()
             .into(binding.ivBandera2)

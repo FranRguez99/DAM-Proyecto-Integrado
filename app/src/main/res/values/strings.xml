@@ -44,4 +44,11 @@
     <string name="testSubtitle">Seleccione la cantidad de preguntas:</string>
     <string name="start">Comenzar</string>
 
+    <!-- Strings pantalla de puntuación -->
+    <string name="textTitleScore">Resultados</string>
+    <string name="textNumAciertos">Número de aciertos:</string>
+    <string name="textNumFallos">Número de fallos:</string>
+    <string name="textPercentAciertos">Porcentaje de aciertos</string>
+    <string name="btVolverMenu">Volver al menú</string>
+
 </resources>
