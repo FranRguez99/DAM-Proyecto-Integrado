@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
-        android:id="@+id/tvNumPreguntas"
+        android:id="@+id/tvNumPreguntasScore"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -92,7 +92,7 @@
         app:layout_constraintEnd_toEndOf="@+id/textView8"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintStart_toStartOf="@+id/tvNumPreguntas"
+        app:layout_constraintStart_toStartOf="@+id/tvNumPreguntasScore"
         app:layout_constraintTop_toTopOf="@+id/textView13"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -108,7 +108,7 @@
         app:layout_constraintEnd_toEndOf="@+id/textView8"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintStart_toStartOf="@+id/tvNumPreguntas"
+        app:layout_constraintStart_toStartOf="@+id/tvNumPreguntasScore"
         app:layout_constraintTop_toTopOf="@+id/textView14"
         app:layout_constraintVertical_bias="0.0" />
 

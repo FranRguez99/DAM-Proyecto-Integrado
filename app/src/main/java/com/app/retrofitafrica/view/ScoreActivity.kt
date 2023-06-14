@@ -17,7 +17,7 @@ class ScoreActivity : AppCompatActivity() {
         val numPreguntas = intent.getIntExtra("numPreguntas", 0)
         val numAciertos = intent.getIntExtra("numAciertos", 0)
         val numFallos = intent.getIntExtra("numFallos", 0)
-        binding.tvNumPreguntas.text = numPreguntas.toString()
+        binding.tvNumPreguntasScore.text = numPreguntas.toString()
         binding.tvNumAciertos.text = numAciertos.toString()
         binding.tvNumFallos.text = numFallos.toString()
         binding.tvPercentAciertos.text = ((numAciertos * 100.0 / numPreguntas).roundToInt().toString()) + "%"

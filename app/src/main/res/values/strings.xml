@@ -51,4 +51,7 @@
     <string name="textPercentAciertos">Porcentaje de aciertos</string>
     <string name="btVolverMenu">Volver al menú</string>
 
+    <!-- String pantalla de puntuaciones -->
+    <string name="textTitlePuntuaciones">Puntuaciones</string>
+
 </resources>
