@@ -44,4 +44,7 @@
     <string name="testSubtitle">Seleccione la cantidad de preguntas:</string>
     <string name="start">Comenzar</string>
 
+    <!-- String pantalla de puntuaciones -->
+    <string name="textTitlePuntuaciones">Puntuaciones</string>
+
 </resources>

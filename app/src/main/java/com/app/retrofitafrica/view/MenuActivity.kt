@@ -24,5 +24,9 @@ class MenuActivity : AppCompatActivity() {
             startActivity(Intent(this, GlossaryActivity::class.java))
         }
 
+        binding.btRanking.setOnClickListener {
+            startActivity(Intent(this, ScoreActivity::class.java))
+        }
+
     }
 }
