@@ -79,10 +79,10 @@ class QuizController(contextActivity: Context, numPreg : Int) : ViewModel(){
     @RequiresApi(Build.VERSION_CODES.O)
     fun submitScore() {
         viewModelScope.launch(Dispatchers.IO) {
-            scoreDao.insertScore(Score(0, numPreguntas, rightAnswerList.size, wrongAnswerList.size, LocalDate.now().toString()))
+            scoreDao.insertScore(Score(0, numPreguntas + 1, rightAnswerList.size, wrongAnswerList.size, LocalDate.now().toString()))
             withContext(Dispatchers.Main) {
                 context.startActivity(Intent(context, ScoreActivity::class.java)
-                    .putExtra("numPreguntas", numPreguntas + 1)
+                    .putExtra("numPreguntas", numPreguntas )
                     .putExtra("numAciertos",rightAnswerList.size )
                     .putExtra("numFallos", wrongAnswerList.size )
                 )
