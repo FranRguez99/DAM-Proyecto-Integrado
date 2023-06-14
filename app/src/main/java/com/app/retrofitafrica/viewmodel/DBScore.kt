@@ -14,15 +14,12 @@ import kotlinx.coroutines.withContext
 
 class DBScore(context : Context) : ViewModel() {
     private val scoreLiveData: MutableLiveData<List<Score>?> = MutableLiveData()
-
     private val db: AppDatabaseScore
     private val scoreDao: ScoreDao
-
     init {
         db = Room.databaseBuilder(context, AppDatabaseScore::class.java, "Scoreboard").build()
         scoreDao = db.scoreDao()
     }
-
     fun loadScores() {
         viewModelScope.launch(Dispatchers.IO) {
             val scores = scoreDao.getAllScoreByResults()
@@ -31,11 +28,9 @@ class DBScore(context : Context) : ViewModel() {
             }
         }
     }
-
     fun getScoreLiveData(): MutableLiveData<List<Score>?> {
         return scoreLiveData
     }
-
     override fun onCleared() {
         super.onCleared()
         db.close()

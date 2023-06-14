@@ -22,7 +22,6 @@ class ScoreActivity : AppCompatActivity() {
         binding.tvNumFallos.text = numFallos.toString()
         binding.tvPercentAciertos.text = ((numAciertos * 100.0 / numPreguntas).roundToInt().toString()) + "%"
 
-
         binding.btVolverMenu.setOnClickListener {
             startActivity(Intent(this, MenuActivity::class.java ))
         }

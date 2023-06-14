@@ -20,7 +20,6 @@ class QuizActivity : AppCompatActivity() {
     private lateinit var binding: ActivityQuizBinding
     private lateinit var quizController: QuizController
     private lateinit var currentQuestionOptions: ArrayList<Pais>
-
     private lateinit var rightAnswer : Pais
     private lateinit var selectedAnswer : Pais
     @RequiresApi(Build.VERSION_CODES.O)
@@ -29,7 +28,6 @@ class QuizActivity : AppCompatActivity() {
         binding = ActivityQuizBinding.inflate(layoutInflater)
         setContentView(binding.root)
         numPreguntas = intent.getIntExtra("numPreguntas", 1)
-
         quizController = QuizController(this, numPreguntas)
         lifecycleScope.launch(Dispatchers.IO) {
             quizController.loadData()
@@ -37,9 +35,6 @@ class QuizActivity : AppCompatActivity() {
                 loadQuestion()
             }
         }
-
-
-
         binding.btNextQuestion.setOnClickListener {
             if (binding.radioGroup.checkedRadioButtonId != -1) {
                 checkAnswer()
@@ -51,29 +46,21 @@ class QuizActivity : AppCompatActivity() {
             } else {
                 mostrarToast("Debe seleccionar una opción.")
             }
-
-
         }
     }
-
     private fun loadQuestion() {
         binding.radioGroup.clearCheck()
         currentQuestionOptions = quizController.getNewQuestion()
         rightAnswer = currentQuestionOptions[0]
-
         currentQuestionOptions.shuffle()
-
         Picasso.get().load(rightAnswer.bandera).fit().centerCrop()
             .into(binding.ivBandera2)
-
         binding.tvPaisQuestion.text = rightAnswer.nombre
-
         binding.opt1.text = currentQuestionOptions[0].capital
         binding.opt2.text = currentQuestionOptions[1].capital
         binding.opt3.text = currentQuestionOptions[2].capital
         binding.opt4.text = currentQuestionOptions[3].capital
     }
-
     private fun checkAnswer() {
         val selectedOption = binding.radioGroup.checkedRadioButtonId
         selectedAnswer = when(selectedOption) {
@@ -83,7 +70,6 @@ class QuizActivity : AppCompatActivity() {
             binding.opt4.id -> currentQuestionOptions[3]
             else -> {Pais("", "", "")}
         }
-
         if (rightAnswer == selectedAnswer) {
             quizController.rightAnswer(selectedAnswer)
             mostrarToast("Respuesta Correcta")
@@ -93,7 +79,6 @@ class QuizActivity : AppCompatActivity() {
         }
 
     }
-
     private fun mostrarToast(message : String) {
         Toast.makeText(this, message , Toast.LENGTH_SHORT).show()
     }

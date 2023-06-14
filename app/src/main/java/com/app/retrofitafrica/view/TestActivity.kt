@@ -15,9 +15,7 @@ class TestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityTestBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         dbPaises = DBPaises(this)
-
         dbPaises.getCountPaisesLiveData().observe(this) {numPaises ->
             numPaises?.let { number ->
                 if (number >= 1 ) {
@@ -26,35 +24,22 @@ class TestActivity : AppCompatActivity() {
             }
         }
         dbPaises.cargarNumPaises()
-
-
-        // Seekbar
         binding.sbNumber.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 val number = progress + 1
                 binding.tvQuestions.text = number.toString()
             }
-
             override fun onStartTrackingTouch(p0: SeekBar?) {
-
             }
-
             override fun onStopTrackingTouch(p0: SeekBar?) {
-
             }
         })
-
         binding.btStart.setOnClickListener {
             val numPreguntas = binding.sbNumber.progress
             startActivity(Intent(this, QuizActivity::class.java).putExtra("numPreguntas", numPreguntas))
         }
-
         binding.ivBackButtonSelectTest.setOnClickListener {
             startActivity(Intent(this, MenuActivity::class.java))
         }
-
     }
-
-
-
 }

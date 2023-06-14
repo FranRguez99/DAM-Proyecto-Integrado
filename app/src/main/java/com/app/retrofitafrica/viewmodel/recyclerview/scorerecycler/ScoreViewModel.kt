@@ -7,7 +7,6 @@ import com.app.retrofitafrica.model.Score
 import kotlin.math.roundToInt
 
 class ScoreViewModel(private val binding: ItemScoreBinding) : RecyclerView.ViewHolder(binding.root) {
-
     @SuppressLint("SetTextI18n")
     fun render(item: Score) {
         binding.tvPercent.text = ((item.rightAnswers * 100.0 / item.numPreguntas).roundToInt().toString()) + "%"

@@ -9,7 +9,7 @@
     <string name="textInitScreen">Inicio de Sesión</string>
     <string name="emailHint">Email:</string>
     <string name="passHint">Contraseña:</string>
-    <string name="rememberHint">Recuerdame:</string>
+    <string name="rememberHint">Recuérdame:</string>
     <string name="textButtonLogIn">Iniciar Sesión</string>
     <string name="textButtonSignIn1">¿No estás registrado?</string>
 

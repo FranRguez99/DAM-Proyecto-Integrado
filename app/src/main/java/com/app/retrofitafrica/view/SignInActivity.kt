@@ -24,26 +24,20 @@ class SignInActivity : AppCompatActivity() {
                 startActivity(Intent(this, LogInActivity::class.java))
                 mostrarToast("Usuario registrado con exito")
             }
-
         }
-
         binding.btSignIn.setOnClickListener {
             if ( !binding.tietPass.text.isNullOrEmpty() || !binding.tietConfPass.text.isNullOrEmpty() || !binding.tietSignMail.text.isNullOrEmpty()  ) {
                 if (binding.tietPass.text.toString() == binding.tietConfPass.text.toString()) {
                     val email = binding.tietSignMail.text.toString()
                     val pass = binding.tietPass.text.toString()
                     authController.signIn(email, pass)
-
                 } else {
                     mostrarToast("Las contraseñas no coinciden")
                 }
             } else {
                 mostrarToast("Debe rellenar todos los campos")
             }
-
         }
-
-
     }
     private fun mostrarToast(text : String) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show()

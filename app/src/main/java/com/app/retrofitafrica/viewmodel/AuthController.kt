@@ -36,7 +36,6 @@ class AuthController : ViewModel() {
 
             }
     }
-
     fun signIn(email: String, password: String) {
         viewModelScope.launch(Dispatchers.IO) {
             try {

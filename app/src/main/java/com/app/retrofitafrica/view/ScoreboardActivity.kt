@@ -31,10 +31,8 @@ class ScoreboardActivity : AppCompatActivity() {
             }
         }
         dbScore.loadScores()
-
         binding.ivBackButtonScore.setOnClickListener {
             startActivity(Intent(this, MenuActivity::class.java))
         }
     }
-
 }
