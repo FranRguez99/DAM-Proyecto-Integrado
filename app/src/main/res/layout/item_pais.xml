@@ -9,8 +9,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/material_dynamic_neutral_variant90"
-        app:cardCornerRadius="10dp">
+        android:backgroundTint="@color/grey"
+        app:cardCornerRadius="10dp"
+        app:cardPreventCornerOverlap="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
