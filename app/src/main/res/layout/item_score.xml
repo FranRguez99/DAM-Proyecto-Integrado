@@ -19,25 +19,26 @@
 
             <TextView
                 android:id="@+id/tvPercent"
-                android:layout_width="0dp"
-                android:layout_height="110dp"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
                 android:fontFamily="@font/nunito_black"
                 android:gravity="center"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:textColor="@color/PrincetonOrange"
                 android:textSize="28sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tabladatos"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tabladatos"
                 app:layout_constraintVertical_bias="0.0"
                 tools:ignore="TextContrastCheck"
                 tools:text="100%" />
 
             <TableLayout
+                android:id="@+id/tabladatos"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="@+id/tvPercent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvPercent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -54,7 +55,7 @@
                         android:gravity="start"
                         android:text="@string/textNumPreguntas"
                         android:textColor="@color/FrenchViolet"
-                        android:textSize="20sp" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/tvNumPreguntas"
@@ -63,6 +64,7 @@
                         android:fontFamily="@font/nunito_bold"
                         android:gravity="center"
                         android:textColor="@color/Tawny"
+                        tools:ignore="TextContrastCheck"
                         tools:text="51" />
 
                 </TableRow>
@@ -79,7 +81,7 @@
                         android:gravity="start"
                         android:text="@string/textNumAciertos"
                         android:textColor="@color/FrenchViolet"
-                        android:textSize="20sp" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/tvRightAnswers"
@@ -88,6 +90,7 @@
                         android:fontFamily="@font/nunito_bold"
                         android:gravity="center"
                         android:textColor="@color/Tawny"
+                        tools:ignore="TextContrastCheck"
                         tools:text="51" />
                 </TableRow>
 
@@ -103,7 +106,7 @@
                         android:gravity="start"
                         android:text="@string/textNumFallos"
                         android:textColor="@color/FrenchViolet"
-                        android:textSize="20sp" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/tvWrongAnswers"
@@ -114,8 +117,10 @@
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
                         android:textColor="@color/Tawny"
+                        tools:ignore="TextContrastCheck"
                         tools:text="51" />
                 </TableRow>
+
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">

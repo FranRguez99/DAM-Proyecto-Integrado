@@ -82,7 +82,7 @@ class QuizController(contextActivity: Context, numPreg : Int) : ViewModel(){
             scoreDao.insertScore(Score(0, numPreguntas + 1, rightAnswerList.size, wrongAnswerList.size, LocalDate.now().toString()))
             withContext(Dispatchers.Main) {
                 context.startActivity(Intent(context, ScoreActivity::class.java)
-                    .putExtra("numPreguntas", numPreguntas )
+                    .putExtra("numPreguntas", numPreguntas + 1 )
                     .putExtra("numAciertos",rightAnswerList.size )
                     .putExtra("numFallos", wrongAnswerList.size )
                 )
